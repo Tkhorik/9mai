@@ -17,8 +17,8 @@ public class Test1 {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "https://my.roboforex.ru/";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    baseUrl = "https://my.roboforex.ru";
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
   }
 
   @Test
@@ -28,8 +28,7 @@ public class Test1 {
     driver.findElement(By.id("login-email")).sendKeys("tom@mail.md");
     driver.findElement(By.id("login-password")).clear();
     driver.findElement(By.id("login-password")).sendKeys("Secret12");
-    driver.findElement(By.cssSelector("button.fSubmit")).click();
-    driver.get(baseUrl + "/en/login");
+    driver.findElement(By.id("login-submit")).click();
     try {
       assertTrue(isElementPresent(By.xpath("//div[@id='right']/div[2]/a/img")));
     } catch (Error e) {
