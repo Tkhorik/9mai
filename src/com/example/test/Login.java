@@ -25,10 +25,10 @@ public class Login {
   @Test
   public void testUntitled() throws Exception {
     goTo();
-    login("tom@mail.md", "Secret12");
+    login("roboftest31@gmail.com", "Chiriac1");
 
     //goToUserprofiule();
-    verifyLogInPage();
+    //verifyLogInPage();
     
     //changeSMF();
    logout();
