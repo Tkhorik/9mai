@@ -21,7 +21,7 @@ public class login {
   @Before
   public void setUp() throws Exception {
   driver = WebDriverFactory.getDriver(DesiredCapabilities.firefox());
-    baseUrl = "https://my.roboforex.ru/";
+    baseUrl = "https://my.roboforex.ru";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -53,8 +53,7 @@ private void login(String username, String password) {
 	  driver.findElement(By.id("login-email")).sendKeys(username);
 	  driver.findElement(By.id("login-password")).clear();
 	  driver.findElement(By.id("login-password")).sendKeys(password);
-	  // click | css=button.fSubmit | 
-	  
+	   driver.findElement(By.id("login-submit")).clear(); 
 	  }
 
 
@@ -73,13 +72,13 @@ private void verifyContent() {
 private void logout() {
 	driver.findElement(By.id("t-user-logout")).click();
 	// verifyElementPresent | id=personal_office_award | 
-	try {
-	  assertTrue(isElementPresent(By.id("personal_office_award")));
-	} catch (Error e) {
-	  verificationErrors.append(e.toString());
-	}
+	//try {
+	 // assertTrue(isElementPresent(By.id("personal_office_award")));
+	// } catch (Error e) {
+	 // verificationErrors.append(e.toString());
+//	}
 	// click | link=Скрыть | 
-	driver.findElement(By.linkText("Скрыть")).click();
+	// driver.findElement(By.linkText("Скрыть")).click();
 
 	
 }
