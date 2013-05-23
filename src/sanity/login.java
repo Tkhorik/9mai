@@ -77,8 +77,8 @@ private void logout() {
 	// } catch (Error e) {
 	 // verificationErrors.append(e.toString());
 //	}
-	// click | link=������ | 
-	// driver.findElement(By.linkText("������")).click();
+	// click | link=Что-то на русском | 
+	// driver.findElement(By.linkText("Что-то на русском")).click();
 
 	
 }
@@ -126,4 +126,17 @@ private void verifyLogoutPageMechanism() {
       acceptNextAlert = true;
     }
   }
+  /*private void logout() {
+		driver.findElement(By.id("t-user-logout")).click();
+		// verifyElementPresent | id=personal_office_award | 
+		//try {
+		 // assertTrue(isElementPresent(By.id("personal_office_award")));
+		// } catch (Error e) {
+		 // verificationErrors.append(e.toString());
+//		}
+		// click | link=Что-то на русском | 
+		// driver.findElement(By.linkText("Что-то на русском")).click();
+
+		
+	}*/
 }
