@@ -29,7 +29,7 @@ public class login {
   public void testLogin() throws Exception {
 	  goToMainPage();
 	  login("tom@mail.md", "Secret12");
-   // verifyContent();
+    verifyContent();
     logout();
     
     goToMainPage();
