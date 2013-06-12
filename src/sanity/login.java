@@ -6,6 +6,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 //import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 ///import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.openqa.selenium.support.ui.Select;
@@ -20,7 +21,8 @@ public class login {
 
   @Before
   public void setUp() throws Exception {
-  driver = WebDriverFactory.getDriver(DesiredCapabilities.firefox());
+  //driver = WebDriverFactory.getDriver(DesiredCapabilities.firefox());
+  driver = new ChromeDriver ();
     baseUrl = "https://my.roboforex.ru";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
