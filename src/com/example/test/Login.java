@@ -6,20 +6,28 @@ import org.junit.*;
 import static org.junit.Assert.*;
 //import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.thoughtworks.selenium.DefaultSelenium;
+import com.thoughtworks.selenium.Selenium;
 //import org.openqa.selenium.support.ui.Select;
 public class Login {
   private WebDriver driver;
   private String baseUrl;
   //private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
+  protected DefaultSelenium selenium;
+  
+  
 
   @Before
       public void setUp() throws Exception {
 	  //driver = WebDriverFactory.getDriver(DesiredCapabilities.firefox());
-	  driver = new FirefoxDriver();
+	  //driver = new FirefoxDriver();
+    selenium = new DefaultSelenium ("localhost", 4444, "*chrome", baseUrl);
     baseUrl = "https://my.roboforex.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    
   }
 
   @Test
@@ -43,7 +51,7 @@ public class Login {
 		} catch (Error e) {
 		  verificationErrors.append(e.toString());
 		}
-	// Проверка логин страницы на елементы
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	
 }
 
