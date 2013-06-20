@@ -7,9 +7,11 @@ import org.junit.*;
 import static org.junit.Assert.*;
 //import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -22,11 +24,9 @@ public class creation {
 
   @Before
   public void setUp() throws Exception {
-	 // FirefoxProfile firefoxProfile = new FirefoxProfile(new File("C:\\Users\\scv19xl\\AppData\\Local\\Mozilla\\Firefox\\Profiles\\6i5wyekq.default"));
-	 // WebDriver driver = new FirefoxDriver(firefoxProfile);
-	  FirefoxProfile profile = new ProfilesIni().getProfile("C:\\Users\\scv19xl\\AppData\\Local\\Mozilla\\Firefox\\Profiles\\6i5wyekq.default");
-	  driver = new FirefoxDriver(profile);
-	  
+//
+	  //
+
     baseUrl = "http://999.md/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
